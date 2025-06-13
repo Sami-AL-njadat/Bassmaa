@@ -66,7 +66,8 @@ class AuthController extends Controller
     {
         // Check if the user is authenticated
         if (!auth()->check()) {
-             Log::error('Unauthenticated user attempted to logout', [
+            // Log unauthenticated logout attempt (error level)
+            Log::error('Unauthenticated user attempted to logout', [
                 'ip' => $request->ip()
             ]);
 

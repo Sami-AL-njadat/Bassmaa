@@ -7,7 +7,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Support\Str;
- 
+
+/**
+ * @method \Laravel\Passport\PersonalAccessTokenResult createToken(string $name, array $scopes = [])
+ */
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
